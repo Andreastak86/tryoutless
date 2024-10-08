@@ -1,0 +1,68 @@
+@width: 10px;
+@height: @width + 10px;
+
+#header {
+    width: @width;
+    height: @height;
+}
+
+/*Styling the container */
+@button-color: blue;
+@hover-color: green;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+
+    //  .title {
+    //      align-self: flex-center;
+    //      margin-bottom: 10px;
+    //      padding-top: 20px;
+    //  }
+
+    .action-btn {
+        background-color: @button-color;
+        color: white;
+        border: 2px solid green;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: @hover-color;
+            border: 4px solid blue;
+        }
+    }
+}
+@animation-duration: 2s;
+@primary-color: blue;
+@hover-color: green;
+
+@keyframes text-animation {
+    0% {
+        color: @primary-color;
+        font-size: 20px;
+    }
+    50% {
+        color: @hover-color;
+        font-size: 24px;
+    }
+    100% {
+        color: @primary-color;
+        font-size: 20px;
+    }
+}
+
+.animated-text {
+    animation: text-animation @animation-duration infinite ease-in-out;
+
+    &:hover {
+        animation-play-state: paused; /* Stopper animasjonen når musen er over teksten */
+    }
+}

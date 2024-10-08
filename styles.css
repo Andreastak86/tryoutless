@@ -1,0 +1,48 @@
+#header {
+  width: 10px;
+  height: 20px;
+}
+/*Styling the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+  width: 400px;
+  height: 300px;
+  border: 2px solid black;
+}
+.container .action-btn {
+  background-color: blue;
+  color: white;
+  border: 2px solid green;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.container .action-btn:hover {
+  background-color: green;
+  border: 4px solid blue;
+}
+@keyframes text-animation {
+  0% {
+    color: blue;
+    font-size: 20px;
+  }
+  50% {
+    color: green;
+    font-size: 24px;
+  }
+  100% {
+    color: blue;
+    font-size: 20px;
+  }
+}
+.animated-text {
+  animation: text-animation 2s infinite ease-in-out;
+}
+.animated-text:hover {
+  animation-play-state: paused;
+  /* Stopper animasjonen når musen er over teksten */
+}
